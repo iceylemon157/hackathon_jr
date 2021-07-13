@@ -2,4 +2,4 @@
 
 hi
 iceylemon Orz
-![image](https://i.imgur.com/1rkJS8t.jpg)
+<img src="https://i.imgur.com/1rkJS8t.jpg" alt="boy" width="40%"/>
