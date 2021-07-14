@@ -35052,18 +35052,39 @@ a.u-link.u-text-hover-grey-90:hover {
   width: 254px;
 }
 @media (max-width: 1199px) {
+  .u-header .u-sheet-1 {
+    min-height: 92px;
+  }
+
   .u-header .u-image-1 {
-    width: 64px;
-    height: 32px;
+    width: auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: -50px;
   }
 }
 
 @media (max-width: 767px) {
+  .u-header .u-sheet-1 {
+    min-height: 166px;
+  }
+
   .u-header .u-image-1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
     width: auto;
   }
 }
+@media (max-width: 575px) {
+  .u-header .u-sheet-1 {
+    min-height: 92px;
+  }
 
+  .u-header .u-image-1 {
+    width: auto;
+    margin-left: -39px;
+  }
+}
 .u-footer {
   background-image: none;
 }
