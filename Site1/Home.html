@@ -8,17 +8,36 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     
     
     
-    
-    
-    
-    
-    
+    <script src="anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> 
+      const animateCSS = (element, animation, prefix = 'animate__') =>
+        // We create a Promise and return it
+        new Promise((resolve, reject) => {
+          const animationName = `${prefix}${animation}`;
+          const node = document.querySelector(element);
+      
+          node.classList.add(`${prefix}animated`, animationName);
+      
+          // When the animation ends, we clean the classes and resolve the Promise
+          function handleAnimationEnd(event) {
+            event.stopPropagation();
+            node.classList.remove(`${prefix}animated`, animationName);
+            resolve('Animation ended');
+          }
+      
+          node.addEventListener('animationend', handleAnimationEnd, {once: true});
+        });
+      // usage -> animateCSS('id', 'animation')
+      </script>
     
     
     
@@ -43,6 +62,9 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-image u-overlap u-overlap-transparent" style="background-position: 50% 50%; background-attachment: fixed; background-image: url(&quot;images/paper-background-391.jpg&quot;);"><header class="u-clearfix u-header u-sticky u-white u-header" id="sec-00ca"><div class="u-clearfix u-sheet u-sheet-1">
+    <script>
+      AOS.init();
+    </script>
         <a href="Home.html" data-page-id="58763120" class="u-image u-logo u-image-1" data-image-width="874" data-image-height="231" title="icon" data-animation-name="fadeIn" data-animation-duration="1500" data-animation-delay="1200" data-animation-direction="">
           <img src="images/GG_logo-horizontal.svg" class="u-logo-image u-logo-image-1" data-image-width="253.9412">
         </a>
@@ -310,104 +332,104 @@
                   <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
                     <ul class="u-spacing-15 u-tab-list u-unstyled" role="tablist">
                       <li class="u-tab-item" role="presentation">
-                        <a class="active u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">US</a>
+                        <a onclick="animateCSS('.myif', 'bounce')" class="active u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">US</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">China</a>
+                        <a onclick="animateCSS('.myif0', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">China</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-3" id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917" aria-selected="false">Germany</a>
+                        <a onclick="animateCSS('.myif1', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-custom-font u-heading-font u-tab-link u-white u-tab-link-3" id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917" aria-selected="false">Germany</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-4" id="link-tab-767a" href="#tab-767a" role="tab" aria-controls="tab-767a" aria-selected="false">UK</a>
+                        <a onclick="animateCSS('.myif2', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-4" id="link-tab-767a" href="#tab-767a" role="tab" aria-controls="tab-767a" aria-selected="false">UK</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-5" id="link-tab-5307" href="#tab-5307" role="tab" aria-controls="tab-5307" aria-selected="false">France</a>
+                        <a onclick="animateCSS('.myif3', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-5" id="link-tab-5307" href="#tab-5307" role="tab" aria-controls="tab-5307" aria-selected="false">France</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-6" id="link-tab-cf34" href="#tab-cf34" role="tab" aria-controls="tab-cf34" aria-selected="false">India</a>
+                        <a onclick="animateCSS('.myif4', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-6" id="link-tab-cf34" href="#tab-cf34" role="tab" aria-controls="tab-cf34" aria-selected="false">India</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-7" id="link-tab-13c4" href="#tab-13c4" role="tab" aria-controls="tab-13c4" aria-selected="false">Italy</a>
+                        <a onclick="animateCSS('.myif5', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-7" id="link-tab-13c4" href="#tab-13c4" role="tab" aria-controls="tab-13c4" aria-selected="false">Italy</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-8" id="link-tab-f1f3" href="#tab-f1f3" role="tab" aria-controls="tab-f1f3" aria-selected="false">Brazil</a>
+                        <a onclick="animateCSS('.myif6', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-8" id="link-tab-f1f3" href="#tab-f1f3" role="tab" aria-controls="tab-f1f3" aria-selected="false">Brazil</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-9" id="link-tab-90ea" href="#tab-90ea" role="tab" aria-controls="tab-90ea" aria-selected="false">Canada</a>
+                        <a onclick="animateCSS('.myif7', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-9" id="link-tab-90ea" href="#tab-90ea" role="tab" aria-controls="tab-90ea" aria-selected="false">Canada</a>
                       </li>
                       <li class="u-tab-item" role="presentation">
-                        <a class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-10" id="link-tab-d783" href="#tab-d783" role="tab" aria-controls="tab-d783" aria-selected="false">Saudi Arabia</a>
+                        <a onclick="animateCSS('.myif8', 'bounce')" class="u-active-white u-border-2 u-border-active-palette-5-light-1 u-border-hover-grey-75 u-border-no-bottom u-border-no-left u-border-no-right u-button-style u-tab-link u-white u-tab-link-10" id="link-tab-d783" href="#tab-d783" role="tab" aria-controls="tab-d783" aria-selected="false">Saudi Arabia</a>
                       </li>
                     </ul>
                     <div class="u-tab-content">
                       <div class="u-align-left u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
                         <div class="u-container-layout u-valign-top u-container-layout-3">
                           <div class="u-clearfix u-custom-html u-custom-html-2" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
-                            <iframe width="100%" height="680" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/usa?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif" width="100%" height="680" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/usa?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-align-left u-container-style u-shape-rectangle u-tab-pane" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
                         <div class="u-container-layout u-container-layout-4">
                           <div class="u-clearfix u-custom-html u-custom-html-3">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/chn?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif0" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/chn?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-2917" role="tabpanel" aria-labelledby="link-tab-2917">
                         <div class="u-container-layout u-container-layout-5">
                           <div class="u-clearfix u-custom-html u-custom-html-4">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/deu?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif1" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/deu?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-767a" role="tabpanel" aria-labelledby="link-tab-767a">
                         <div class="u-container-layout u-container-layout-6">
                           <div class="u-clearfix u-custom-html u-custom-html-5">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/gbr?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif2" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/gbr?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-5307" role="tabpanel" aria-labelledby="link-tab-5307">
                         <div class="u-container-layout u-container-layout-7">
                           <div class="u-clearfix u-custom-html u-custom-html-6">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/fra?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif3"  width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/fra?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-cf34" role="tabpanel" aria-labelledby="link-tab-cf34">
                         <div class="u-container-layout u-container-layout-8">
                           <div class="u-clearfix u-custom-html u-custom-html-7">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/ind?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif4" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/ind?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-13c4" role="tabpanel" aria-labelledby="link-tab-13c4">
                         <div class="u-container-layout u-container-layout-9">
                           <div class="u-clearfix u-custom-html u-custom-html-8">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/ita?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif5" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/ita?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,EN_HAZ_TRTDISR,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-f1f3" role="tabpanel" aria-labelledby="link-tab-f1f3">
                         <div class="u-container-layout u-container-layout-10">
                           <div class="u-clearfix u-custom-html u-custom-html-9">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/bra?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif6" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/bra?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-90ea" role="tabpanel" aria-labelledby="link-tab-90ea">
                         <div class="u-container-layout u-container-layout-11">
                           <div class="u-clearfix u-custom-html u-custom-html-10">
-                            <iframe width="100%" height="600" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/can?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif7" width="100%" height="600" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/can?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,EN_EWT_RCYR,EN_EWT_RCYPCAP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
                       <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-d783" role="tabpanel" aria-labelledby="link-tab-d783">
                         <div class="u-container-layout u-valign-top u-container-layout-12">
                           <div class="u-clearfix u-custom-html u-custom-html-11">
-                            <iframe width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/sau?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe class="myif8" width="100%" height="700" title="Responsible Consumption and Production" src="https://country-profiles.unstatshub.org/sau?goal=12&amp;series=EN_MAT_DOMCMPG,EN_MAT_DOMCMPC,EN_EWT_GENPCAP,EN_HAZ_PCAP,EN_HAZ_GENGDP,ER_FFS_PRTSST,ER_FFS_PRTSPC,ER_FFS_PRTSPR" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                           </div>
                         </div>
                       </div>
